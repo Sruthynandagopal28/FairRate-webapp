@@ -1,0 +1,215 @@
+.review{
+    display: none;
+    .review__section_container{
+        padding: 94px 150px 28px;
+        background-color: $white;
+        background-color: $white;
+        position: relative;
+        border-bottom: 1px solid $pale_grey;
+        &::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .load{
+            display: inline-block;
+            border:  7px solid $mild_blue;
+            border-right: 7px solid $bright_blue;
+            border-bottom: 7px solid $bright_blue;
+            border-top: 7px solid $bright_blue;
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            transition: transform 0.5s linear;
+            &:hover{
+                animation: loader 2s linear infinite;
+                @keyframes loader {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        span{
+            &.percentage{
+                font-size: 36px;
+                color: $dark;
+                left: 14%;
+                position: absolute;
+                top: 66%;
+                transform: translate(-50% , -50%);
+            }
+        }
+        div{
+            display:inline-block;
+            vertical-align: top;
+            margin-right: 26px;
+            margin-top: 15px;
+            h1{
+                font-size: 36px;
+                color: $dark;
+            }
+            p{
+                margin-top: 4px;
+                color: $battleship_grey;
+                font-size: 18px;
+            }
+
+        }
+        span{
+            &.queries{
+                float: right;
+                border: 1px solid $light_blue_grey;
+                padding: 10px;
+                margin-top: 28px;
+                span{
+                    padding-right: 10px;
+                    border-right: 1px solid $light_blue_grey;
+                    color: $dark;
+                    font-size: 14px;
+                }
+                a{
+                    text-decoration: none;
+                    span{
+                        &.cta{
+                            margin-top: 5px;
+                            margin-left: 10px; 
+                            border-right: none;
+                            color: $light_blue_grey;
+                        }
+                    }
+                }  
+            }
+        } 
+    }
+    .process_completed{
+        background-color: $lgtgrey;
+        padding: 101px 0 147px;
+        div{
+            &.process_section_wrapper{
+                .review_next_btn{
+                    float: right; 
+                    outline: none;
+                    cursor: pointer;
+                    background-color: $bright_blue;
+                    color: $white;
+                    padding: 14px 72px;
+                    border: 1px solid $bright_blue;
+                    transition: all 0.5s linear;
+                    &:hover{
+                        color: $bright_blue;
+                        border: 1px solid $white;
+                        background-color: $white;
+                    }
+                }
+                .review_back_btn{
+                    float: left; 
+                    padding: 15px 72px;
+                    background-color: $light_blue_grey;
+                    border: 1px solid $light_blue_grey;
+                    color: $white;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: all 0.4s linear;
+                    &:hover{
+                        color: $light_blue_grey;
+                        background-color: $white;
+                        border: 1px solid $white;
+                    }
+                }
+                div{
+                    background-color: $white;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    &:after{
+                        content:"";
+                        clear: both;
+                        display: block;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    h4{
+                        display: inline-block;
+                        font-size: 24px;
+                        color: $dark;
+                        margin-left:20px;
+                        font-weight: 400;
+                    }
+                    span{
+                        border: 1px solid;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        text-align: center;
+                        border-radius: 50%;
+                        margin-top: 5px;
+                    }
+
+                    div{
+                        &:after{
+                            clear: both;
+                            content:"";
+                            display: block;
+                        }
+                        &.edit{
+                            padding: 0;
+                            margin:0;
+                            float: right;
+                            cursor: pointer;
+                            span{
+                                background-color: $green;
+                                color: $white;
+                                padding: 4px;
+                                font-size: 14px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    div{
+                        &.get_started{
+                            border: 1px solid $bright_blue;
+                            background-color: $bright_blue;
+                            color: $white;
+                            margin: 0;
+                            float: right;
+                            width: 147px;
+                            padding: 5px;
+                            span{
+                                border: none;
+                                border-right: 1px solid $white;
+                                width: 80%;
+                                border-radius: 0;
+                                font-size: 14px;
+                            }
+                            span{
+                                &.link{
+                                    border:0;
+                                    color: white;
+                                    width: 16px;
+                                    height: 18px;
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        background-color: $pale_grey;
+                        color: $ash;
+                        h4{
+                            color: $ash;
+                        }
+                        
+                    }
+
+                }
+                
+            }
+        }
+    }
+    
+}

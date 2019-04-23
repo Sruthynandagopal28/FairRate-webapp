@@ -1,0 +1,518 @@
+.rates{ 
+    display: none;
+    background-color: $lgtgrey;
+    .rates_wrapper{
+        padding: 143px 0 140px;
+        font-size: 0;
+        text-align: center;
+        h2{
+            font-size: 36px;
+            margin-bottom: 66px;
+        }
+        .rate__table_container{
+            display: inline-block;
+            width: 730px;
+            margin-right: 30px;
+            &::after{
+                content:"";
+                display: block;
+                clear: both;
+            }
+            .rate__container_div{
+                padding: 0 20px;
+                background-color: $white;
+                margin-bottom: 20px;
+                table{
+                    background-color: $white;
+                    border-collapse: collapse;
+                    background-color: $white;
+                    thead{
+                        tr{
+                            border-bottom: 1px solid $pale_grey;
+                            &:after{
+                                content:"";
+                                clear: both;
+                                display: block;
+                            }
+                            th{
+                                font-size: 12px;
+                                padding: 20px;
+                                text-align: left;
+                                color: $dark;
+                                position: relative;
+                                p{
+                                    &:after{
+                                        content:"\f0dc";
+                                        font-family: 'Font Awesome 5 Free' !important;
+                                        font-weight: 600;
+                                        float: right;
+                                        margin-top: 4px;
+                                        cursor: pointer;
+                                    }
+                                }
+                                &:last-child{
+                                    ul{
+                                        position: absolute;
+                                        box-shadow: 2px 2px 15px $grey;
+                                        top:80%;
+                                        left: 40%;
+                                        li{
+                                            list-style-type: none;
+                                            padding: 10px;
+                                            background-color: $white;
+                                            color: $dark;
+                                            cursor: pointer;
+                                            &:hover{
+                                                background-color: $light_blue_grey;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            border-bottom: 1px solid $pale_grey;
+                            &:last-child{
+                                border-bottom: none;
+                            }
+                            &.fixed_15{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $bottle_green;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $bottle_green;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $bottle_green;
+                                            width: 60%
+                                        }
+                                    }
+                                }
+                            }
+                            &.fixed_20{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $bright_blue;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $bright_blue;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $bright_blue;
+                                            width: 80%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.fixed_30{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $cerulean;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $cerulean;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $cerulean;
+                                            width: 30%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.adjustable_10{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $purple;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $purple;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $purple;
+                                            width: 65%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.adjustable_7{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $violet;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $violet;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $violet;
+                                            width: 65%;
+                                        }
+                                    }
+                                }
+                            }
+                            &.adjustable_5{
+                                td{
+                                    button{
+                                        &:first-of-type{
+                                            background-color: $hot_pink;
+                                            color: $white;
+                                            margin-right: 8px;
+                                            border: 1px solid $hot_pink;
+                                        }
+                                    }
+                                    .progress_bar{
+                                        div{
+                                            background-color: $hot_pink;
+                                            width: 65%;
+                                        }
+                                    }
+                                }
+                            }
+                            td{
+                                padding: 20px 10px;
+                                text-align: left;
+                                & > div{
+                                    width: 82px;
+                                    height: 4px;
+                                    background-color: $pale_grey;
+                                    border-radius: 3px;
+                                    display: inline-block;
+                                    
+                                    div{
+                                        height: 4px;
+                                        background-color: green;
+                                        border-radius: 3px;
+                                    }
+                                }
+                                p{  
+                                    display: inline-block;
+                                    margin-right: 15px;
+                                    font-size: 18px;
+                                    color: $dark;
+                                }
+                                button{
+                                    padding: 5px 8px;
+                                    border-radius: 12px;
+                                    outline: none;
+                                    border: 1px solid $icon_color;
+                                    color: $gun_metal;
+                                    background-color: $icon_color;
+                                    font-size: 12px;
+                                }
+                                span{
+                                    font-size: 18px;
+                                    color: $grey;
+                                }
+                                &:nth-child(3){
+                                    p{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .que_mrk{
+                float: left;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                background-color: $white;
+                border-radius: 50%;
+                margin-right: 10px;
+                font-size: 18px;
+                i{
+                    color: $bottle_green;
+                }
+            }
+            & > p{
+                float: left;
+                font-size: 14px;
+                color: $battleship_grey;
+            }
+            & .rate_buttons{
+                margin: 50px 0;
+                .rate__next_btn{
+                    float: right; 
+                    outline: none;
+                    cursor: pointer;
+                    background-color: $bright_blue;
+                    color: $white;
+                    padding: 14px 72px;
+                    border: 1px solid $bright_blue;
+                    transition: all 0.2s linear;
+                    &:hover{
+                        color: $bright_blue;
+                        border: 1px solid $white;
+                        background-color: $white;
+                    }
+                }
+                .rate__back_btn{
+                    float: left; 
+                    padding: 15px 72px;
+                    background-color: $light_blue_grey;
+                    border: 1px solid $light_blue_grey;
+                    color: $white;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: all 0.2s linear;
+                    &:hover{
+                        color: $light_blue_grey;
+                        background-color: $white;
+                        border: 1px solid $white;
+                    }
+                }
+            }
+             
+        }
+        .filter{
+            display: inline-block;
+            vertical-align: top;
+            width: 308px;
+            background-color: $white;
+            padding: 30px 20px 80px;
+            .filter_container{
+                border-bottom: 1px solid $pale_grey;
+                ul{
+                    display: inline-block;
+                    width: calc((100% /2 ) - 40px);
+                    &:first-child{
+                        margin-right: 50px;
+                    }
+                    &:last-child{
+                        width: 40%;
+                    }
+                    li{
+                        list-style-type: none;
+                        text-align: left;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        color: $battleship_grey;
+                        &:first-child{
+                            margin-bottom: 30px;
+                            font-size: 14px;
+                            color: $dark;
+                            span{
+                                border: 1px solid $pale_grey;
+                                width: 26px;
+                                height: 26px;
+                                margin-right: 6px;
+                                cursor: pointer;
+                                padding: 3px;
+                                i{
+                                    color: $bright_blue;
+                                }
+                            }
+                        }
+                        &:last-child{
+                            margin-bottom: 30px;
+                        }
+                        span{
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 6px;
+                            text-align: center;
+                            cursor: pointer;
+                            i{
+                                color: $white;
+                            }
+                        }
+                        .fixed_15{
+                            background-color: $bottle_green;
+                            border: 1px solid $bottle_green;
+                        }
+                        .fixed_20{
+                            background-color: $bright_blue;
+                            border: 1px solid $bright_blue;
+                        }
+                        .fixed_30{
+                            background-color: $cerulean;
+                            border: 1px solid $cerulean;
+                        }
+                        .adjustable_10{
+                            background-color: $purple;
+                            border: 1px solid $purple;
+                        }
+                        .adjustable_7{
+                            background-color: $violet;
+                            border: 1px solid $violet;
+                        }
+                        .adjustable_5{
+                            background-color: $hot_pink;
+                            border: 1px solid $hot_pink;
+                        }
+                    }
+
+                    h5{
+                        display: inline-block;
+                    }
+                    span{
+                        display: inline-block;
+                    }
+                    p{
+                        display: inline-block;
+                    }
+                }
+            }
+            .range{
+                padding: 20px 0;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                // input[type=range] {
+                //     width: 184px; 
+                //     height: 4px;
+                //     border-radius: 3px;
+                //     -webkit-appearance: none;
+                //     margin-right: 10px;
+                // }
+                    
+                // input[type=range]:focus {
+                // outline: none;
+                // }
+                    
+                // input[type=range]::-webkit-slider-thumb {
+                // -webkit-appearance: none;
+                // border: 1px solid $light_blue_grey;
+                // height: 17px;
+                // width: 17px;
+                // border-radius: 50%;
+                // background: $white;
+                // cursor: pointer;
+                // margin-top: -8px;
+                // background-color: $white;
+                // }
+                // input[type=range]::-moz-range-thumb {
+                // border: 1px solid $light_blue_grey;
+                // height: 17px;
+                // width: 17px;
+                // border-radius: 50%;
+                // background: $white;
+                // cursor: pointer;
+                // }
+                    
+                // input[type=range]::-ms-thumb {
+                // border: 1px solid $light_blue_grey;
+                // height: 17px;
+                // width: 17px;
+                // border-radius: 50%;
+                // background: $white;
+                // cursor: pointer;
+                // }
+                // input[type=range]::-webkit-slider-runnable-track {
+                // width: 184px;
+                // height: 4px;
+                // cursor: pointer;
+                // background-color: $bright_blue;
+                // border-radius: 3px;
+                // border: 1px solid $bright_blue;
+                // }
+                    
+                // input[type=range]:focus::-webkit-slider-runnable-track {
+                // background: $bright_blue;
+                // }
+                    
+                // input[type=range]::-moz-range-track {
+                // width: 184px;
+                // height: 4px;
+                // cursor: pointer;
+                // background-color: $bright_blue;
+                // border-radius: 3px;
+                // border: 1px solid $bright_blue;
+                // }
+                    
+                // input[type=range]::-ms-track {
+                // width: 184px;
+                // height: 4px;
+                // cursor: pointer;
+                // background-color: $light_blue_grey;
+                // border-color: $light_blue_grey;
+                // color: $light_blue_grey;
+                // }
+                // input[type=range]::-ms-fill-lower {
+                // background: $light_blue_grey;
+                // border: 1px solid $light_blue_grey;
+                // border-radius: 3px;
+                // }
+                // input[type=range]:focus::-ms-fill-lower {
+                // background:  $light_blue_grey;
+                // }
+                // input[type=range]::-ms-fill-upper {
+                // background: $light_blue_grey;
+                // border: 1px solid $light_blue_grey;
+                // border-radius: 3px;
+                // }
+                // input[type=range]:focus::-ms-fill-upper {
+                // background:$light_blue_grey;
+                // }
+                input[type='range'] {
+                    overflow: visible;
+                    width: 184px;
+                    height: 4px;
+                    -webkit-appearance: none;
+                    background-color: $light_blue_grey;
+                    margin-right: 10px;
+                }
+                  
+                input[type='range']::-webkit-slider-runnable-track {
+                    height: 4px;
+                    -webkit-appearance: none;
+                    color: $bright_blue;
+                    margin-top: -1px;
+                }
+                input[type=range]:focus {
+                    outline: none;
+                }
+                  
+                input[type='range']::-webkit-slider-thumb {
+                    width: 16px;
+                    -webkit-appearance: none;
+                    height: 16px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background: $black;
+                    // box-shadow:  -100px 0 0 100px $bright_blue;
+                    border: 8px solid black;
+                    margin-top: -8px;
+                }
+              
+                span{
+                    border: 1px solid $light_blue_grey;
+                    background-color: $white;
+                    padding: 5px;
+                    color: $dark;
+                    font-size: 14px;
+
+                }
+                h6{
+                    font-size: 14px;
+                    font-weight: 1.43;
+                    color: $battleship_grey;
+                    margin-bottom: 10px;
+                    text-align: left;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

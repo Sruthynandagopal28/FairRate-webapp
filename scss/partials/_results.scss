@@ -1,0 +1,286 @@
+.results{
+    background-color: $lgtgrey;
+    display: none;
+    div{
+        &.results_wrapper{
+            padding: 143px 0 120px;
+            text-align: center;
+            h2{
+                font-size: 36px;
+                font-weight: 600;
+                color: $dark;
+                margin-bottom: 14px;
+            }
+            h5{
+                font-size: 18px;
+                color: $battleship_grey;
+                font-weight: normal;
+            }
+            .options{
+                margin: 60px 0 25px;
+                &:after{
+                    content: "";
+                    clear: both;
+                    display: block;
+                }
+                div{
+                    &.year{
+                        position: relative;
+                        ul{
+                            box-shadow: 2px 2px 15px $dark;
+                            left: 55%;
+                            position: absolute;
+                            list-style-type: none;
+                            background-color: $white;
+                            top: 103%;
+                            transform: translateY(5%);
+                            li{
+                                padding: 10px;
+                                width: 100px;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: $lgtgrey;
+                                }
+                            }
+                        }
+                    }
+                }
+                div{
+                    &.price{
+                        position: relative;
+                        ul{
+                            box-shadow: 2px 2px 10px $dark;
+                            left: 55%;
+                            position: absolute;
+                            list-style-type: none;
+                            background-color: $white;
+                            top: 120%;
+                            transform: translateY(5%);
+                            li{
+                                padding: 10px;
+                                width: 100px;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: $lgtgrey;
+                                }
+                            }
+                        }
+                    }
+                }
+                div{
+                    &.sort{
+                        span{
+                            color: $dark;
+                            &:after{
+                                content:"\f0dc";
+                                font-family: 'Font Awesome 5 Free' !important;
+                                font-weight: 600;
+                                float: right;
+                                margin-top: 4px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                div{
+                    background-color: $white;
+                    padding: 10px 14px;
+                    width: 220px;
+                    text-align: left;
+                    float: left;
+                    margin-right: 17px;
+                    &:last-child{
+                        color: $grey;
+                        font-size: 14px;
+                    }
+                    &:after{
+                        content:"";
+                        display: block;
+                        clear: both;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: $dark;
+                        cursor: pointer;
+                        &:after{
+                            content:"\f0dc";
+                            font-family: 'Font Awesome 5 Free' !important;
+                            font-weight: 600;
+                            float: right;
+                            margin-top: 4px;
+                            cursor: pointer;
+                        }
+                    }
+                    &:last-child{
+                        width: 160px;
+                        float: right;
+                        margin-right: 0;
+                    }
+                }
+                button{
+                    float: left;
+                    background-color: $aqua;
+                    border: 1px solid $aqua;
+                    outline: none;
+                    color: $white;
+                    padding: 10px 19px;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    font-size: 14px;
+                }
+            }
+            .table_container{
+                table{
+                    width: 100%;
+                    border-collapse: collapse;
+                    thead{
+                        background-color: $pale_clr;
+                        th{
+                            padding: 14px 20px;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: $dark;
+                            text-align: left;
+                            &:last-child{
+                                text-align: right;
+                            }
+                            span{
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                                cursor: pointer;
+                                &.que_mrk{
+                                    background-color: $bright_blue;
+                                    vertical-align: top;
+                                    color: $white; 
+                                    width: 18px;
+                                    height: 18px;
+                                    border-radius: 50%;
+                                    padding: 4px; 
+                                    margin-left: 8px;
+                                    cursor: none;
+                                }
+                            }
+                            
+                        }
+                    }
+                    tbody{
+                        background-color: $white;
+                        tr{
+                            border-bottom: 1px solid $pale_grey;
+                            td{
+                                text-align: left;
+                                padding: 20px 20px 10px;
+                                &:last-child{
+                                    text-align: right;
+                                }
+                                &:first-child{
+                                    p{
+                                        margin-top: 20px;
+                                    }
+                                }
+                                button{
+                                    padding: 10px 28px;
+                                    background-color: $battleship_grey;
+                                    color: $white;
+                                    outline: none;
+                                    border: 1px solid $battleship_grey;
+                                    cursor: pointer;
+                                    border-radius: 3px;
+                                }
+                                p{
+                                    font-size: 14px;
+                                    color: $grey;
+                                    line-height: 1.57;
+                                    margin-top: 6px;
+                                }
+                                h4{
+                                    color: $cerulean;
+                                    font-size: 26px;
+                                    font-weight: 400;
+                                    span{
+                                        color: $grey;
+                                        font-size: 14px;
+                                    }
+                                }
+                                h6{
+                                    font-size: 16px;
+                                    color: $dark;
+                                    font-weight: 400;
+                                }
+                                img{
+                                    width: 110px;
+                                    height: auto;
+                                }
+                            }    
+                        }
+                    }
+                }
+                .pagination{
+                    background-color: $white;
+                    padding: 24px;
+                    font-size: 0;
+                    button{
+                        padding: 8px;
+                        width: 144px;
+                        display: inline-block;
+                        border: 1px solid $light_blue_grey;
+                        outline: none;
+                        cursor: pointer;
+                        &.previous_btn{
+                            background-color: $lgtgrey;
+                            color: $battleship_grey;
+                            transition: all 0.2s linear;
+                            &:hover{
+                                color: $lgtgrey;
+                                background-color: $battleship_grey;
+                            }
+                        }
+                        &.next_btn{
+                            background-color: $white;
+                            color: $battleship_grey;
+                            transition: all 0.2s linear;
+                            &:hover{
+                                color: $white;
+                                background-color: $battleship_grey;
+                            }
+                        }
+                    }
+                }
+            } 
+            .results__back_btn{
+                float: left; 
+                padding: 15px 72px;
+                background-color: $light_blue_grey;
+                border: 1px solid $light_blue_grey;
+                color: $white;
+                outline: none;
+                cursor: pointer;
+                margin-top: 30px;
+                font-size: 14px;
+                transition: all 0.2s linear;
+                &:hover{
+                    color: $light_blue_grey;
+                    background-color: $white;
+                    border: 1px solid $white;
+                }
+            }
+            .results__next_btn{
+                float: right; 
+                outline: none;
+                cursor: pointer;
+                margin-top: 30px;
+                background-color: $bright_blue;
+                color: $white;
+                padding: 14px 72px;
+                border: 1px solid $bright_blue;
+                transition: all 0.2s linear;
+                &:hover{
+                    color: $bright_blue;
+                    border: 1px solid $white;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
