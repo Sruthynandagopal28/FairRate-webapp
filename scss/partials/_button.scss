@@ -1,0 +1,26 @@
+.btn{
+    padding: 15px;
+    width: 180px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s linear;
+    &.nxt{
+        background-color: $bright_blue;
+        border: 1px solid $bright_blue;
+        color: $white;
+        &:hover{
+            color: $bright_blue;
+            background-color: $white;
+        }
+    }
+    &.bck{
+        background-color: $light_blue_grey;
+        border: 1px solid $light_blue_grey;
+        color: $white;
+        &:hover{
+            color: $light_blue_grey;
+            background-color: $white;
+        }
+    }
+}

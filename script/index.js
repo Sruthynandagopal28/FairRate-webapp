@@ -1,13 +1,18 @@
 $(document).ready(function(){
+    // signup page button function
     $(".signup__nxt_btn").click(function(){
         event.preventDefault();
         $(".signup").css("display", "none");
         $("footer").css("display", "none");
         $(".form_container").css("display", "block");
     });
+
+    // form checkbox 
     $(".slct").click(function(){
         $(this).parent("div").toggleClass("selected");
     });
+
+    //  form page button func
     $(".form__nxt_btn").click(function(){
         $(".form_container").css("display", "none");
         $(".doc_upload").css("display", "block");
@@ -18,40 +23,30 @@ $(document).ready(function(){
         $(".signup").css("display", "block");
         $("footer").css("display", "block");
     });
+
+    // calender plugin func
     $( function() {
         $( "#datepicker" ).datepicker();
     } );
-    
-    $(".dropdown").click(function(){
-        $(this).find(".dropdown_list").slideDown();
+     
+    // dropdown func
+    $(".dropdown p").click(function(){
+        event.stopPropagation();
+        $(this).next().slideToggle();
     });
     $(document).on("click", function(event){
-        var $dropdown = $(".dropdown");
+        var $dropdown = $(".dropdown p");
         if($dropdown !== event.target && !$dropdown.has(event.target).length){
             $(".dropdown_list").slideUp();
         }    
     });    
-    $(".year dropdown").click(function(){
-        $(this).find(".year_list dropdown_list").toggle();
-    });
-    $(document).on("click", function(event){
-        var $dropdown = $(".year dropdown");
-        if($dropdown !== event.target && !$dropdown.has(event.target).length){
-            $(".year_list dropdown_list").hide();
-        }    
-    });    
-    $(".price dropdown").click(function(){
-        $(this).find(".price_list dropdown_list").toggle();
-    });
-    $(document).on("click", function(event){
-        var $dropdown = $(".price dropdown");
-        if($dropdown !== event.target && !$dropdown.has(event.target).length){
-            $(".price_list dropdown_list").hide();
-        }    
-    });    
-    $(".clk").click(function(){
+  
+    // burgler_alarm div checkbox func
+    $(".check").click(function(){
         $(this).parent("div").parent("div").toggleClass("selected"); 
     });
+
+    // doc page button func
     $(".doc_nxt_btn").click(function(){
         $(".doc_upload").css("display", "none");
         $(".results").css("display", "block");
@@ -63,6 +58,7 @@ $(document).ready(function(){
         $("footer").css("display", "none");
     });
     
+    // results page button func
     $(".results__back_btn").click(function(){
         $(".results").css("display", "none");
         $(".doc_upload").css("display", "block");
@@ -73,6 +69,8 @@ $(document).ready(function(){
         $(".rates").css("display", "block");
         $("footer").css("display", "block");
     });
+
+    // rate page button func
     $(".rate__back_btn").click(function(){
         $(".rates").css("display", "none");
         $(".results").css("display", "block");
@@ -84,11 +82,8 @@ $(document).ready(function(){
         $("header").css("border-bottom", "1px solid #dfe3e8");
         $("footer").css("display", "block");
     });
-    $(".link").click(function(){
-        $("header").css("border-bottom", "none");
-        $(".review").css("display", "none");
-        $(".final_step").css("display", "block");
-    });
+   
+    // review page button func
     $(".review_next_btn").click(function(){
         $("header").css("border-bottom", "none");
         $(".review").css("display", "none");
@@ -99,6 +94,8 @@ $(document).ready(function(){
         $(".review").css("display", "none");
         $(".rates").css("display", "block");
     });
+
+    // finalstep page cta func
     $(".redirect").click(function(){
         $("header").css("display","block");
         $(".final_step").css("display", "none");
@@ -109,6 +106,8 @@ $(document).ready(function(){
         $(".final_step").css("display", "none");
         $(".signup").css("display", "block");
     });
+
+    // header- user_details 
     $(".user_details").click(function(){
         $(this).find(".profile").toggle();
     });
@@ -122,15 +121,17 @@ $(document).ready(function(){
         $(".user_details").css("display","none");
         $(".login").css("display", "inline-block");
     });
+
+    // for getting the text value in dropdown
     $(".dropdown_list li").click(function(){
-        event.stopPropagation();
         var dropval = $(this).text();
         $(this).parents('.dropdown').children('p').text(dropval);
-        $(this).parent('ul').hide();
+        $(this).parent('ul').slideUp();
     });
-    $("input [type= 'range'] ").click(function(){
-        $(this).css("background-color","white");
+
+    // rate-filter_container 
+    $(".filter_container span").click(function(){
+        $(this).toggleClass("checkbox_select");
     });
-    
     
 });

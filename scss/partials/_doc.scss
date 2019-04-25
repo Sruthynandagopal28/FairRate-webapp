@@ -5,7 +5,6 @@
         &.doc_wrapper{
             padding: 143px 0 80px;
             h2{
-                margin-bottom: 50px;
                 font-size: 36px;
                 font-weight: 600;
                 width: 567px;
@@ -18,23 +17,33 @@
                     margin: 50px 0 30px;
                     width: 100%;
                     font-size: 0;
-                    div{
-                        display: inline-block;
+                    button{
+                        outline: none;
                         width: calc( 100% / 2);
                         padding: 15px;
                         text-align: center;
                         text-transform: uppercase;
                         cursor: pointer;
                         font-size: 13px;
-                        &:first-child{
+                        border: 1px solid  $white;
+                        background-color: $white; 
+                        color: $dark;
+                        transition: border-color 0.3s linear;
+                        &:hover{
+                            border-color: $battleship_grey;
+                        }
+                        &.selected{
                             border: 1px solid  $battleship_grey;
                             background-color: $battleship_grey; 
                             color: $white;
                         }
-                        &:last-child{
-                            border: 1px solid  $white;
-                            background-color: $white; 
-                            color: $dark;
+                        &:first-of-type{
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                        }
+                        &:last-of-type{
+                            border-top-right-radius: 3px;
+                            border-bottom-right-radius: 3px;
                         }
                     }
                 }
@@ -100,9 +109,7 @@
                 }
                 ul{
                     font-size: 18px;
-                    margin-bottom: 60px;
-                    margin-top: 10px;
-                    margin-left: 20px;
+                    margin:10px 0 60px 20px;
                     color: $gun_metal;
                     li{
                         list-style-type: none;
@@ -128,9 +135,7 @@
                             &.inner_list{
                                 font-size: 16px;
                                 line-height: 1.75;
-                                margin-top: 10px;
-                                margin-bottom: 10px;
-                                margin-left: 40px;
+                                margin: 10px 0 10px 40px;
                             }
                             li{
                                 &:nth-child(2){
@@ -181,6 +186,7 @@
                                 &:last-child{
                                     text-align: right;
                                     img{
+                                        margin-right: 0;
                                         &:hover{
                                             cursor: pointer;
                                             animation: shake 0.5s infinite linear;
@@ -213,41 +219,11 @@
             }
         }
         .doc_btn{
-            &::after{
-                content: "";
-                clear: both;
-                display: block;
-            }
             .doc_back_btn{
-                padding: 15px 72px;
-                background-color: $light_blue_grey;
-                border: 1px solid $light_blue_grey;
-                color: $white;
-                outline: none;
-                cursor: pointer;
                 float: left;
-                font-size: 14px;
-                transition: all 0.4s linear;
-                &:hover{
-                    color: $light_blue_grey;
-                    background-color: $white;
-                    border: 1px solid $white;
-                }
             }
             .doc_nxt_btn{
-                padding: 15px 72px;
-                background-color: $bright_blue;
-                border: 1px solid $bright_blue;
-                color: $white;
-                outline: none;
-                cursor: pointer;
-                font-size: 14px;
                 float: right;
-                &:hover{
-                    color: $bright_blue;
-                    background-color: $white;
-                    border: 1px solid $white;
-                }
             }
         }
     }

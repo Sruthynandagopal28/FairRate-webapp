@@ -5,18 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link rel="stylesheet" href="stylesheet/style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="stylesheet/datepicker.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="stylesheet/style.css"/>
     </head>
     <body>
         <header>
-            <div class="header_wrapper">
-                <span class="sidebar"><img src="images/img.svg" /></span>
+            <div class="header_wrapper clear">
+                <button class="sidebar"><img src="images/img.svg" /></button>
+                <a href="https://www.google.com/" target="_blank" class="logo"></a>
                 <nav>
                     <a href="#">HOME</a>
                     <a href="#">APPLICATION</a>
@@ -45,7 +43,7 @@
                     <form>
                         <input type="text" placeholder="First name"/>
                         <input type="text" placeholder="Last name" />
-                        <button class="signup__nxt_btn">Next</button>
+                        <button class="signup__nxt_btn btn nxt">Next</button>
                     </form>
                 </div>
             </section>
@@ -60,7 +58,7 @@
                         </div>
                     </div>
                     <div class="form_details">
-                        <form>
+                        <form class="clear">
                             <input type="text" placeholder="Enter the exact address">
                             <input type="email" placeholder="Email Address">
                             <div class="checkbox">
@@ -68,7 +66,7 @@
                                 <div class="checkbox_div"><span class="slct"><i class="fas fa-check"></i></span><p>Co-op</p></div>
                                 <div class="checkbox_div"><span class="slct"><i class="fas fa-check"></i></span><p>House</p></div>
                             </div>
-                            <div class="dropdown"><p>I don't know</p>
+                            <div class="dropdown clear"><p>I don't know</p>
                                 <ul class="dropdown_list">
                                     <li>I don't know</li>
                                     <li>This month</li>
@@ -81,17 +79,17 @@
                         <div class="div_container"> 
                             <div class="burgler_alarm">
                                 <img src="images/criminal.png">
-                                <div><span class="clk"><i class="fas fa-check"></i></span><p>Burgler Alarm</p></div>
+                                <div><span class="check"><i class="fas fa-check"></i></span><p>Burgler Alarm</p></div>
                             </div>
                             <div class="burgler_alarm">
                                 <img src="images/invalid-name.png">
-                                <div><span class="clk"><i class="fas fa-check"></i></span><p>Burgler Alarm</p></div>
+                                <div><span class="check"><i class="fas fa-check"></i></span><p>Burgler Alarm</p></div>
                             </div>
                         </div>
                         
                         <div class="form_btn">
-                            <button class="form__bck_btn">BACK</button>
-                            <button class="form__nxt_btn">NEXT</button>
+                            <button class="form__bck_btn btn bck">BACK</button>
+                            <button class="form__nxt_btn btn nxt">NEXT</button>
                         </div>
                     </div> 
                 </div>
@@ -100,8 +98,8 @@
                 <div class="doc_wrapper">
                     <h2>Few more step ahead upload your ID Document 👆</h2>
                     <div class="doc_process">
-                        <div>Photo Indentification</div>
-                        <div>Proof of Address</div>
+                        <button class="selected">Photo Indentification</button>
+                        <button>Proof of Address</button>
                     </div>
                     <div class="doc_container">
                         <h4>Upload photo Indentification</h4>
@@ -143,17 +141,17 @@
                             </table>
                         </div>
                     </div>
-                    <div class="doc_btn">
-                        <button class="doc_back_btn">BACK</button>
-                        <button class="doc_nxt_btn">NEXT</button>
+                    <div class="doc_btn clear">
+                        <button class="doc_back_btn btn bck">BACK</button>
+                        <button class="doc_nxt_btn btn nxt">NEXT</button>
                     </div>
                 </div>
             </section>
-            <section class="results">
-                <div class="results_wrapper">
+            <section class="results ">
+                <div class="results_wrapper clear">
                     <h2>Your fairest results</h2>
                     <h5>16 Results for 30 years xied in 64117</h5>
-                    <div class="options">
+                    <div class="options clear">
                         <div class="year dropdown">
                             <p>15 years </p>
                             <ul class="year_list dropdown_list">
@@ -172,105 +170,106 @@
                                 <li>Adjustable</li>
                             </ul>
                         </div>
-                        <button>Filter Results</button>
-                        <div class="sort">Sort by:<span>Fairest</span>  </div>
+                        <button>Filter Results</button> 
+                        <div class="sort">Sort by:<span class="clear">Fairest</span>  </div>
                     </div>
                     <div class="table_container">
-                    <table cellspacing="0">
-                        <thead>
-                            <tr>
-                                <th>Lender</th>
-                                <th><span class="fas fa-sort"></span>APR<span class="fas fa-question que_mrk"></span></th>
-                                <th><span class="fas fa-sort"></span>Rate</th>
-                                <th><span class="fas fa-sort"></span>Est. Payment/Fees<span class="fas fa-question que_mrk"></span></th>
-                                <th>Questions?</th>
-                                <th>Apply Now</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="images/bitmap2.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap3.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap1.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap4.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap5.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap6.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap7.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/bitmap8.png"/><p>NMLS ID: 7707</p></td>
-                                <td><h4>3.6% APR</h4><p>Mar 10</p></td>
-                                <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
-                                <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
-                                <td><button>Next</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Lender</th>
+                                    <th><span class="fas fa-sort"></span>APR<span class="fas fa-question que_mrk"></span></th>
+                                    <th><span class="fas fa-sort"></span>Rate</th>
+                                    <th><span class="fas fa-sort"></span>Est. Payment/Fees<span class="fas fa-question que_mrk"></span></th>
+                                    <th>Questions?</th>
+                                    <th>Apply Now</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="images/bitmap2.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap3.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap1.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap4.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap5.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap6.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap7.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/bitmap8.png"/><p>NMLS ID: 7707</p></td>
+                                    <td><h4>3.6% APR</h4><p>Mar 10</p></td>
+                                    <td><h6>3.500% Rate</h6><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h4>$898.09<span>/mo</span></h4><p>1 point</p><p>30 Rate Lock</p></td>
+                                    <td><h6>(887) 407 - 37123</h6><p>Toll-free, no obligations</p></td>
+                                    <td><button>Next</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="pagination">
                         <button class="previous_btn"><span class="fas fa-arrow-left"></span></button>
                         <button class="next_btn"><span class="fas fa-arrow-right"></span></button>
                     </div>
-                </div>
-                <button class="results__back_btn">Back</button>
-                <button class="results__next_btn">Next</button>
+                    <button class="results__back_btn btn bck">Back</button>
+                    <button class="results__next_btn btn nxt">Next</button>
+                </div> 
             </div>
         </section>
         <section class="rates">
             <div class="rates_wrapper">
                 <h2>Your fairest results</h2>
-                <div class="rate__table_container">
+                <div class="rate__table_container clear">
                     <div class="rate__container_div">
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="clear">
                                     <th>RATE TYPE</th>
                                     <th>FAIR RATE / APR</th>
                                     <th>POINTS/CREDITS</th>
@@ -325,8 +324,8 @@
                     <span class="que_mrk"><i class="far fa-question-circle"></i></span>
                     <p>Rates and fees as of 12:06 PM</p>
                     <div class="rate_buttons">
-                        <button class="rate__back_btn">BACK</button>
-                        <button class="rate__next_btn">NEXT</button>
+                        <button class="rate__back_btn btn bck">BACK</button>
+                        <button class="rate__next_btn btn nxt">NEXT</button>
                     </div>
                 </div>
                 <div class="filter">
@@ -358,23 +357,25 @@
             </div>
         </section>
         <section class="review">
-            <div class="review__section_container">
-                <div class="load"></div>
-                <span class="percentage">60%</span>
-                <div>
+            <div class="review__section_container clear">
+                <div class="load_container">
+                    <div class="load" ></div>
+                    <span class="percentage">60%</span>
+                </div>
+                <div class="load_content">
                     <h1>Your Mortgage is 60% Complete</h1>
                     <p>Great Start Adrian! Please complete remaining steps!</p>
                 </div>
                 <span class="queries"><span>Talk to us</span><a href="#"><span class="fas fa-arrow-right cta"></a></span></span>
             </div>
-            <section class="process_completed">
-                <div class="process_section_wrapper">
-                    <div><span>1</span><h4>Personal details</h4><div class="edit">edit <span class="fas fa-check"></span></div></div>
+            <section class="process_completed ">
+                <div class="process_section_wrapper clear">
+                    <div class="clear"><span>1</span><h4>Personal details</h4><div class="edit clear">edit <span class="fas fa-check"></span></div></div>
                     <div><span>2</span><h4>Employment & Income</h4><div class="edit">edit <span class="fas fa-check"></span></div></div>
                     <div><span>3</span><h4>Adverse events</h4><div class="get_started"><span>Get Started</span><a href="#"><span class="fas fa-arrow-right link"></a></span></span></div></div>
                     <div><span>4</span><h4>Upload Documents</h4></div>
-                    <button class="review_back_btn">Back</button>
-                    <button class="review_next_btn">Next</button>
+                    <button class="review_back_btn btn bck">Back</button>
+                    <button class="review_next_btn btn nxt">Next</button>
                 </div>
             </section>
         </section>
@@ -433,6 +434,9 @@
                 </div>
             </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="script/index.js"></script>
     </body>   
 </html>

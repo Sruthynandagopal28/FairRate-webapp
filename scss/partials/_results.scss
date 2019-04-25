@@ -5,6 +5,7 @@
         &.results_wrapper{
             padding: 143px 0 120px;
             text-align: center;
+            font-size: 0;
             h2{
                 font-size: 36px;
                 font-weight: 600;
@@ -18,30 +19,10 @@
             }
             .options{
                 margin: 60px 0 25px;
-                &:after{
-                    content: "";
-                    clear: both;
-                    display: block;
-                }
                 div{
                     &.year{
-                        position: relative;
                         ul{
-                            box-shadow: 2px 2px 15px $dark;
-                            left: 55%;
-                            position: absolute;
-                            list-style-type: none;
-                            background-color: $white;
-                            top: 103%;
                             transform: translateY(5%);
-                            li{
-                                padding: 10px;
-                                width: 100px;
-                                cursor: pointer;
-                                &:hover{
-                                    background-color: $lgtgrey;
-                                }
-                            }
                         }
                     }
                 }
@@ -49,21 +30,7 @@
                     &.price{
                         position: relative;
                         ul{
-                            box-shadow: 2px 2px 10px $dark;
-                            left: 55%;
-                            position: absolute;
-                            list-style-type: none;
-                            background-color: $white;
-                            top: 120%;
                             transform: translateY(5%);
-                            li{
-                                padding: 10px;
-                                width: 100px;
-                                cursor: pointer;
-                                &:hover{
-                                    background-color: $lgtgrey;
-                                }
-                            }
                         }
                     }
                 }
@@ -84,7 +51,6 @@
                 }
                 div{
                     background-color: $white;
-                    padding: 10px 14px;
                     width: 220px;
                     text-align: left;
                     float: left;
@@ -93,15 +59,11 @@
                         color: $grey;
                         font-size: 14px;
                     }
-                    &:after{
-                        content:"";
-                        display: block;
-                        clear: both;
-                    }
                     p{
                         font-size: 14px;
                         color: $dark;
                         cursor: pointer;
+                        padding: 10px 14px;
                         &:after{
                             content:"\f0dc";
                             font-family: 'Font Awesome 5 Free' !important;
@@ -113,6 +75,7 @@
                     }
                     &:last-child{
                         width: 160px;
+                        padding: 10px 14px;
                         float: right;
                         margin-right: 0;
                     }
@@ -127,6 +90,10 @@
                     cursor: pointer;
                     border-radius: 3px;
                     font-size: 14px;
+                    &:hover{
+                        background-color: white;
+                        color: $aqua;
+                    }
                 }
             }
             .table_container{
@@ -187,6 +154,11 @@
                                     border: 1px solid $battleship_grey;
                                     cursor: pointer;
                                     border-radius: 3px;
+                                    &:hover{
+                                        background-color: $pale_clr;
+                                        color: $battleship_grey;
+
+                                    }
                                 }
                                 p{
                                     font-size: 14px;
@@ -216,71 +188,49 @@
                         }
                     }
                 }
-                .pagination{
-                    background-color: $white;
-                    padding: 24px;
-                    font-size: 0;
-                    button{
-                        padding: 8px;
-                        width: 142px;
-                        display: inline-block;
-                        border: 1px solid $light_blue_grey;
-                        outline: none;
-                        cursor: pointer;
-                        &.previous_btn{
-                            background-color: $lgtgrey;
-                            color: $battleship_grey;
-                            transition: all 0.2s linear;
-                            &:hover{
-                                color: $lgtgrey;
-                                background-color: $battleship_grey;
-                            }
+            }
+            .pagination{
+                background-color: $white;
+                padding: 24px;
+                font-size: 0;
+                button{
+                    padding: 8px;
+                    width: 142px;
+                    display: inline-block;
+                    border: 1px solid $light_blue_grey;
+                    outline: none;
+                    cursor: pointer;
+                    &.previous_btn{
+                        background-color: $lgtgrey;
+                        color: $battleship_grey;
+                        transition: all 0.2s linear;
+                        &:hover{
+                            color: $lgtgrey;
+                            background-color: $battleship_grey;
                         }
-                        &.next_btn{
-                            background-color: $white;
-                            color: $battleship_grey;
-                            transition: all 0.2s linear;
-                            &:hover{
-                                color: $white;
-                                background-color: $battleship_grey;
-                            }
+                    }
+                    &.next_btn{
+                        background-color: $white;
+                        color: $battleship_grey;
+                        transition: all 0.2s linear;
+                        &:hover{
+                            color: $white;
+                            background-color: $battleship_grey;
                         }
                     }
                 }
-            } 
+                
+            }
             .results__back_btn{
                 float: left; 
-                padding: 15px 72px;
-                background-color: $light_blue_grey;
-                border: 1px solid $light_blue_grey;
-                color: $white;
-                outline: none;
-                cursor: pointer;
                 margin-top: 30px;
-                font-size: 14px;
-                transition: all 0.2s linear;
-                &:hover{
-                    color: $light_blue_grey;
-                    background-color: $white;
-                    border: 1px solid $white;
-                }
             }
             .results__next_btn{
                 float: right; 
-                outline: none;
-                cursor: pointer;
                 margin-top: 30px;
-                background-color: $bright_blue;
-                color: $white;
-                padding: 14px 72px;
-                border: 1px solid $bright_blue;
-                transition: all 0.2s linear;
-                &:hover{
-                    color: $bright_blue;
-                    border: 1px solid $white;
-                    background-color: $white;
-                }
             }
+             
+            
         }
     }
 }

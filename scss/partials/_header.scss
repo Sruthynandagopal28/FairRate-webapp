@@ -8,35 +8,44 @@ header{
     div{
         padding: 0 29px;
         font-size: 0;
-        background: url("../images/group-5.png") no-repeat left;
-        background-position: 85px;
-        @media 
-            (-webkit-min-device-pixel-ratio: 2), 
-            (min-resolution: 192dpi) { 
-            .img {
-            background: url("../images/group-5@2x.png") no-repeat left;
-            background-position: 85px;
-            }
-        }   
-        @media 
-            (-webkit-min-device-pixel-ratio: 3), 
-            (min-resolution: 288dpi) { 
-            .img {
-            background: url("../images/group-5@3x.png") no-repeat left;
-            background-position: 85px;
-            }
-        }          
+        
         &:after{
             content: "";
             clear: both;
             display: block;
         }
-        span{
+        button{
             &.sidebar{
-                display: inline-block;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: 20px 0;
                 cursor: pointer;
+                outline: none;
+                border: 0;
+            }
+        }
+        a{
+           
+            &.logo{
+                display: inline-block;
+                width:185px;
+                height: 40px;
+                margin: 13px 0 13px 37px;
+                background: url("../images/group-5.png") no-repeat left;
+                @media 
+                    (-webkit-min-device-pixel-ratio: 2), 
+                    (min-resolution: 192dpi) { 
+                    .img {
+                    background: url("../images/group-5@2x.png") no-repeat left;
+                    background-position: 85px;
+                    }
+                }   
+                @media 
+                    (-webkit-min-device-pixel-ratio: 3), 
+                    (min-resolution: 288dpi) { 
+                    .img {
+                    background: url("../images/group-5@3x.png") no-repeat left;
+                    background-position: 85px;
+                    }
+                }          
             }
         }
         a{
@@ -45,17 +54,14 @@ header{
         }
         nav{
             float: right;
-            margin-top: 14px;
-            margin-bottom: 14px;
+            margin: 14px 0;
             a{
-                margin-right: 42px;
+                margin: 8px 42px 8px 0;
                 text-decoration: none;
                 cursor: pointer;
                 font-size: 15px;
                 color: $grey;
                 vertical-align: bottom;
-                margin-top: 8px;
-                margin-bottom: 8px;
                 &.notification{
                     margin: 6px 30px 6px 20px;
                     span{
@@ -103,6 +109,14 @@ header{
                     padding: 0;
                     background: none;
                     position: relative;
+                    h6{
+                        span{
+                            display: inline-block;
+                            margin-left: 10px;
+                            vertical-align: top;
+                            margin-top: 3px;
+                        }
+                    }
                     div{
                         &.profile{
                             display: none;
