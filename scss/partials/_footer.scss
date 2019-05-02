@@ -12,6 +12,9 @@ footer{
                     width: calc((100% /4) - 98px);
                     margin-right: 70px;
                     &:first-child{
+                        h6{
+                            margin-bottom: 0;
+                        }
                         span{
                             margin-top: 12px;
                             a{
@@ -22,7 +25,6 @@ footer{
                                 &.mail_id{
                                     color: $primary_clr;
                                     font-size: 12px;
-                                    margin-top: 8px;
                                 }
                                 img{
                                     margin-right: 8px;

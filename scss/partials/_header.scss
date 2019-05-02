@@ -5,38 +5,48 @@ header{
     left: 0;
     right: 0;
     z-index: 3;
+    // box-shadow:0 0 2px $grey;
     div{
         padding: 0 29px;
         font-size: 0;
-        background: url("../images/group-5.png") no-repeat left;
-        background-position: 85px;
-        @media 
-            (-webkit-min-device-pixel-ratio: 2), 
-            (min-resolution: 192dpi) { 
-            .img {
-            background: url("../images/group-5@2x.png") no-repeat left;
-            background-position: 85px;
-            }
-        }   
-        @media 
-            (-webkit-min-device-pixel-ratio: 3), 
-            (min-resolution: 288dpi) { 
-            .img {
-            background: url("../images/group-5@3x.png") no-repeat left;
-            background-position: 85px;
-            }
-        }          
+        
         &:after{
             content: "";
             clear: both;
             display: block;
         }
-        span{
+        button{
             &.sidebar{
-                display: inline-block;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin: 20px 0;
                 cursor: pointer;
+                outline: none;
+                border: 0;
+            }
+        }
+        a{
+           
+            &.logo{
+                display: inline-block;
+                width:185px;
+                height: 40px;
+                margin: 13px 0 13px 37px;
+                background: url("../images/group-5.png") no-repeat left;
+                @media 
+                    (-webkit-min-device-pixel-ratio: 2), 
+                    (min-resolution: 192dpi) { 
+                    .img {
+                    background: url("../images/group-5@2x.png") no-repeat left;
+                    background-position: 85px;
+                    }
+                }   
+                @media 
+                    (-webkit-min-device-pixel-ratio: 3), 
+                    (min-resolution: 288dpi) { 
+                    .img {
+                    background: url("../images/group-5@3x.png") no-repeat left;
+                    background-position: 85px;
+                    }
+                }          
             }
         }
         a{
@@ -45,17 +55,14 @@ header{
         }
         nav{
             float: right;
-            margin-top: 14px;
-            margin-bottom: 14px;
+            margin: 14px 0;
             a{
-                margin-right: 42px;
+                margin: 8px 42px 8px 0;
                 text-decoration: none;
                 cursor: pointer;
                 font-size: 15px;
                 color: $grey;
                 vertical-align: bottom;
-                margin-top: 8px;
-                margin-bottom: 8px;
                 &.notification{
                     margin: 6px 30px 6px 20px;
                     span{
@@ -103,45 +110,68 @@ header{
                     padding: 0;
                     background: none;
                     position: relative;
-                    div{
+                    font-size: 0;
+                    p{
+                        font-size: 13px;
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-top: 10px;
+                        cursor: pointer;
+                        span{
+                            display: inline-block;
+                            margin-left: 10px;
+                            vertical-align: top;
+                            margin-top: 3px;
+                            cursor: pointer;
+                        }
+                    }
+                    ul{
                         &.profile{
-                            display: none;
-                            background: none;
-                            width: 275px;
-                            position: absolute;
-                            top:calc(100% + 15px);
-                            background-color: $white;
-                            right: 0;
-                            padding: 20px;
-                            font-size: 0;
-                            box-shadow: 4px 5px 6px $grey;
-                            div{
-                                background:none;
-                                padding: 0;
-                                display: inline-block;
-                                vertical-align: top;
-                                p{
-                                    font-size: 14px;
-                                    color: $dark;
-                                    font-weight: bold;
-                                }
-                                button{
-                                    background-color: $bright_blue;
-                                    color: $white;
-                                    outline: none;
-                                    border: 1px solid $bright_blue;
-                                    padding: 8px 10px;
-                                    border-radius: 3px;
-                                    margin-top: 5px;
-                                    font-size: 12px;
-                                    cursor: pointer;
-                                    transition: all 0.3s linear;
-                                    &:hover{
-                                        background-color: $white;
-                                        color: $bright_blue;
-                                        border: 1px solid $white;
+                            &.dropdown_list{
+                                display: none;
+                                background: none;
+                                width: 275px;
+                                position: absolute;
+                                top:calc(100% + 15px);
+                                background-color: $white;
+                                right: 0;
+                                padding: 20px;
+                                font-size: 0;
+                                box-shadow: 4px 5px 6px $grey;
+                                li{
+                                    display: inline-block;
+                                    padding:0;
+                                    margin:0;
+                                    vertical-align: top;
+                                    &:last-child{
+                                        width: 186px;
                                     }
-
+                                    &:hover{
+                                        background-color: transparent;
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                        color: $dark;
+                                        font-weight: bold;
+                                        margin:0;
+                                       
+                                    }
+                                    button{
+                                        background-color: $bright_blue;
+                                        color: $white;
+                                        outline: none;
+                                        border: 1px solid $bright_blue;
+                                        padding: 8px 10px;
+                                        border-radius: 3px;
+                                        margin-top: 5px;
+                                        font-size: 12px;
+                                        cursor: pointer;
+                                        transition: all 0.3s linear;
+                                        &:hover{
+                                            background-color: $white;
+                                            color: $bright_blue;
+                                        }
+                                    }
                                 }
                             }
                             

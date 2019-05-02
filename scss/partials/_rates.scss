@@ -13,11 +13,6 @@
             display: inline-block;
             width: 730px;
             margin-right: 30px;
-            &::after{
-                content:"";
-                display: block;
-                clear: both;
-            }
             .rate__container_div{
                 padding: 0 20px;
                 background-color: $white;
@@ -29,11 +24,6 @@
                     thead{
                         tr{
                             border-bottom: 1px solid $pale_grey;
-                            &:after{
-                                content:"";
-                                clear: both;
-                                display: block;
-                            }
                             th{
                                 font-size: 12px;
                                 padding: 20px;
@@ -50,22 +40,9 @@
                                         cursor: pointer;
                                     }
                                 }
-                                &:last-child{
-                                    ul{
-                                        position: absolute;
-                                        box-shadow: 2px 2px 15px $grey;
-                                        top:80%;
-                                        left: 40%;
-                                        li{
-                                            list-style-type: none;
-                                            padding: 10px;
-                                            background-color: $white;
-                                            color: $dark;
-                                            cursor: pointer;
-                                            &:hover{
-                                                background-color: $light_blue_grey;
-                                            }
-                                        }
+                                ul{
+                                    li{
+                                        font-weight: 400;
                                     }
                                 }
 
@@ -78,14 +55,20 @@
                             &:last-child{
                                 border-bottom: none;
                             }
+                            td{
+                                button{
+                                    &:first-of-type{
+                                        margin-right: 8px;
+                                        color: $white;
+                                    }
+                                }
+                            }
                             &.fixed_15{
                                 td{
                                     button{
                                         &:first-of-type{
                                             background-color: $bottle_green;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $bottle_green;
+                                        
                                         }
                                     }
                                     .progress_bar{
@@ -101,9 +84,7 @@
                                     button{
                                         &:first-of-type{
                                             background-color: $bright_blue;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $bright_blue;
+                                            
                                         }
                                     }
                                     .progress_bar{
@@ -119,9 +100,7 @@
                                     button{
                                         &:first-of-type{
                                             background-color: $cerulean;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $cerulean;
+                                           
                                         }
                                     }
                                     .progress_bar{
@@ -137,9 +116,7 @@
                                     button{
                                         &:first-of-type{
                                             background-color: $purple;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $purple;
+                                           
                                         }
                                     }
                                     .progress_bar{
@@ -155,10 +132,7 @@
                                     button{
                                         &:first-of-type{
                                             background-color: $violet;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $violet;
-                                        }
+                                        } 
                                     }
                                     .progress_bar{
                                         div{
@@ -173,9 +147,7 @@
                                     button{
                                         &:first-of-type{
                                             background-color: $hot_pink;
-                                            color: $white;
-                                            margin-right: 8px;
-                                            border: 1px solid $hot_pink;
+                                        
                                         }
                                     }
                                     .progress_bar{
@@ -251,36 +223,11 @@
             }
             & .rate_buttons{
                 margin: 50px 0;
-                .rate__next_btn{
+                .btn.nxt{
                     float: right; 
-                    outline: none;
-                    cursor: pointer;
-                    background-color: $bright_blue;
-                    color: $white;
-                    padding: 14px 72px;
-                    border: 1px solid $bright_blue;
-                    transition: all 0.2s linear;
-                    &:hover{
-                        color: $bright_blue;
-                        border: 1px solid $white;
-                        background-color: $white;
-                    }
                 }
-                .rate__back_btn{
-                    float: left; 
-                    padding: 15px 72px;
-                    background-color: $light_blue_grey;
-                    border: 1px solid $light_blue_grey;
-                    color: $white;
-                    outline: none;
-                    cursor: pointer;
-                    font-size: 14px;
-                    transition: all 0.2s linear;
-                    &:hover{
-                        color: $light_blue_grey;
-                        background-color: $white;
-                        border: 1px solid $white;
-                    }
+                .btn.bck{
+                    float: left;
                 }
             }
              
@@ -328,6 +275,11 @@
                             margin-bottom: 30px;
                         }
                         span{
+                            &.checkbox_select{
+                                i{
+                                    visibility: visible;
+                                }
+                            }
                             width: 20px;
                             height: 20px;
                             margin-right: 6px;
@@ -335,7 +287,9 @@
                             cursor: pointer;
                             i{
                                 color: $white;
+                                visibility: hidden;
                             }
+                           
                         }
                         .fixed_15{
                             background-color: $bottle_green;
@@ -379,123 +333,91 @@
                 &:last-child{
                     padding-bottom: 0;
                 }
-                // input[type=range] {
-                //     width: 184px; 
-                //     height: 4px;
-                //     border-radius: 3px;
-                //     -webkit-appearance: none;
-                //     margin-right: 10px;
-                // }
-                    
-                // input[type=range]:focus {
-                // outline: none;
-                // }
-                    
-                // input[type=range]::-webkit-slider-thumb {
-                // -webkit-appearance: none;
-                // border: 1px solid $light_blue_grey;
-                // height: 17px;
-                // width: 17px;
-                // border-radius: 50%;
-                // background: $white;
-                // cursor: pointer;
-                // margin-top: -8px;
-                // background-color: $white;
-                // }
-                // input[type=range]::-moz-range-thumb {
-                // border: 1px solid $light_blue_grey;
-                // height: 17px;
-                // width: 17px;
-                // border-radius: 50%;
-                // background: $white;
-                // cursor: pointer;
-                // }
-                    
-                // input[type=range]::-ms-thumb {
-                // border: 1px solid $light_blue_grey;
-                // height: 17px;
-                // width: 17px;
-                // border-radius: 50%;
-                // background: $white;
-                // cursor: pointer;
-                // }
-                // input[type=range]::-webkit-slider-runnable-track {
-                // width: 184px;
-                // height: 4px;
-                // cursor: pointer;
-                // background-color: $bright_blue;
-                // border-radius: 3px;
-                // border: 1px solid $bright_blue;
-                // }
-                    
-                // input[type=range]:focus::-webkit-slider-runnable-track {
-                // background: $bright_blue;
-                // }
-                    
-                // input[type=range]::-moz-range-track {
-                // width: 184px;
-                // height: 4px;
-                // cursor: pointer;
-                // background-color: $bright_blue;
-                // border-radius: 3px;
-                // border: 1px solid $bright_blue;
-                // }
-                    
-                // input[type=range]::-ms-track {
-                // width: 184px;
-                // height: 4px;
-                // cursor: pointer;
-                // background-color: $light_blue_grey;
-                // border-color: $light_blue_grey;
-                // color: $light_blue_grey;
-                // }
-                // input[type=range]::-ms-fill-lower {
-                // background: $light_blue_grey;
-                // border: 1px solid $light_blue_grey;
-                // border-radius: 3px;
-                // }
-                // input[type=range]:focus::-ms-fill-lower {
-                // background:  $light_blue_grey;
-                // }
-                // input[type=range]::-ms-fill-upper {
-                // background: $light_blue_grey;
-                // border: 1px solid $light_blue_grey;
-                // border-radius: 3px;
-                // }
-                // input[type=range]:focus::-ms-fill-upper {
-                // background:$light_blue_grey;
-                // }
-                input[type='range'] {
-                    overflow: visible;
-                    width: 184px;
+                input[type=range] {
+                    width: 184px; 
                     height: 4px;
+                    border-radius: 3px;
                     -webkit-appearance: none;
-                    background-color: $light_blue_grey;
                     margin-right: 10px;
                 }
-                  
-                input[type='range']::-webkit-slider-runnable-track {
-                    height: 4px;
-                    -webkit-appearance: none;
-                    color: $bright_blue;
-                    margin-top: -1px;
-                }
+                    
                 input[type=range]:focus {
                     outline: none;
                 }
-                  
-                input[type='range']::-webkit-slider-thumb {
-                    width: 16px;
+                    
+                input[type=range]::-webkit-slider-thumb {
                     -webkit-appearance: none;
-                    height: 16px;
+                    border: 1px solid $light_blue_grey;
+                    height: 17px;
+                    width: 17px;
                     border-radius: 50%;
+                    background: $white;
                     cursor: pointer;
-                    background: $black;
-                    // box-shadow:  -100px 0 0 100px $bright_blue;
-                    border: 8px solid black;
                     margin-top: -8px;
+                    background-color: $white;
                 }
-              
+                input[type=range]::-moz-range-thumb {
+                    border: 1px solid $light_blue_grey;
+                    height: 17px;
+                    width: 17px;
+                    border-radius: 50%;
+                    background: $white;
+                    cursor: pointer;
+                }
+                    
+                input[type=range]::-ms-thumb {
+                    border: 1px solid $light_blue_grey;
+                    height: 17px;
+                    width: 17px;
+                    border-radius: 50%;
+                    background: $white;
+                    cursor: pointer;
+                }
+                input[type=range]::-webkit-slider-runnable-track {
+                    width: 184px;
+                    height: 4px;
+                    cursor: pointer;
+                    background-color: $bright_blue;
+                    border-radius: 3px;
+                    border: 1px solid $bright_blue;
+                }
+                    
+                input[type=range]:focus::-webkit-slider-runnable-track {
+                    background: $bright_blue;
+                }
+                    
+                input[type=range]::-moz-range-track {
+                    width: 184px;
+                    height: 4px;
+                    cursor: pointer;
+                    background-color: $bright_blue;
+                    border-radius: 3px;
+                    border: 1px solid $bright_blue;
+                }
+                    
+                input[type=range]::-ms-track {
+                    width: 184px;
+                    height: 4px;
+                    cursor: pointer;
+                    background-color: $bright_blue;
+                    border-color: $bright_blue;
+                }
+                input[type=range]::-ms-fill-lower {
+                    background: $bright_blue;
+                    border: 1px solid $bright_blue;
+                    border-radius: 3px;
+                }
+                input[type=range]:focus::-ms-fill-lower {
+                    background:  $bright_blue;
+                }
+                input[type=range]::-ms-fill-upper {
+                    background: $bright_blue;
+                    border: 1px solid $bright_blue;
+                    border-radius: 3px;
+                }
+                input[type=range]:focus::-ms-fill-upper {
+                    background:$bright_blue;
+                }
                 span{
                     border: 1px solid $light_blue_grey;
                     background-color: $white;
