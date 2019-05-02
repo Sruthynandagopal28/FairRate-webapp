@@ -17,26 +17,32 @@
                     background-color: white;
                     font-size: 0;
                     padding: 26px 20px;
-                    position: relative;
-                    .load{
-                        display: inline-block;
-                        border:  7px solid $mild_blue;
-                        border-right: 7px solid $bright_blue;
-                        border-bottom: 7px solid $bright_blue;
-                        border-top: 7px solid $bright_blue;
-                        width: 105px;
-                        height: 105px;
-                        border-radius: 50%;
-                        transform: rotate(40deg);
-                    }
-                    span{
-                        &.percentage{
-                            font-size: 36px;
-                            color: $dark;
-                            left: 17%;
-                            position: absolute;
-                            top: 43%;
-                            transform: translate(-50% , -50%);
+                    div{
+                        &.finalstep_div{
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: top;
+                            .load{
+                                display: inline-block;
+                                border:  7px solid $mild_blue;
+                                border-right: 7px solid $bright_blue;
+                                border-bottom: 7px solid $bright_blue;
+                                border-top: 7px solid $bright_blue;
+                                width: 105px;
+                                height: 105px;
+                                border-radius: 50%;
+                                transform: rotate(40deg);
+                            }
+                            span{
+                                &.percentage{
+                                    font-size: 36px;
+                                    color: $dark;
+                                    left: 50%;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translate(-50% , -50%);
+                                }
+                            } 
                         }
                     }
                     div{

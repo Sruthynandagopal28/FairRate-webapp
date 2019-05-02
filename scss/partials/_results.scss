@@ -125,7 +125,7 @@
                                     border-radius: 50%;
                                     padding: 4px; 
                                     margin-left: 8px;
-                                    cursor: none;
+                                    cursor: default;
                                 }
                             }
                             
@@ -221,11 +221,11 @@
                 }
                 
             }
-            .results__back_btn{
+            .btn.bck{
                 float: left; 
                 margin-top: 30px;
             }
-            .results__next_btn{
+            .btn.nxt{
                 float: right; 
                 margin-top: 30px;
             }

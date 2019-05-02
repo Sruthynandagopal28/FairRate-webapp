@@ -190,7 +190,7 @@
                                         &:hover{
                                             cursor: pointer;
                                             animation: shake 0.5s infinite linear;
-                                            transition: animation 0.5s linear;
+                                            transition: animation 0.5s  linear;
                                             @keyframes shake {
                                                 0% { transform: translate(1px, 1px) rotate(0deg); }
                                                 10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -219,10 +219,10 @@
             }
         }
         .doc_btn{
-            .doc_back_btn{
+            .btn.bck{
                 float: left;
             }
-            .doc_nxt_btn{
+            .btn.nxt{
                 float: right;
             }
         }

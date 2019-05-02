@@ -36,6 +36,11 @@
   margin: 0 auto;
 }
 
+.review__section_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .process_section_wrapper {
   max-width: 505px;
   margin: 0 auto;
@@ -51,7 +56,7 @@
   margin: 0 auto;
 }
 
-.clear :after {
+.clear:after {
   content: "";
   clear: both;
   display: block;
@@ -179,14 +184,23 @@ header div nav div.user_details {
   padding: 0;
   background: none;
   position: relative;
+  font-size: 0;
 }
-header div nav div.user_details h6 span {
+header div nav div.user_details p {
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  cursor: pointer;
+}
+header div nav div.user_details p span {
   display: inline-block;
   margin-left: 10px;
   vertical-align: top;
   margin-top: 3px;
+  cursor: pointer;
 }
-header div nav div.user_details div.profile {
+header div nav div.user_details ul.profile.dropdown_list {
   display: none;
   background: none;
   width: 275px;
@@ -198,18 +212,25 @@ header div nav div.user_details div.profile {
   font-size: 0;
   box-shadow: 4px 5px 6px #929eab;
 }
-header div nav div.user_details div.profile div {
-  background: none;
-  padding: 0;
+header div nav div.user_details ul.profile.dropdown_list li {
   display: inline-block;
+  padding: 0;
+  margin: 0;
   vertical-align: top;
 }
-header div nav div.user_details div.profile div p {
+header div nav div.user_details ul.profile.dropdown_list li:last-child {
+  width: 186px;
+}
+header div nav div.user_details ul.profile.dropdown_list li:hover {
+  background-color: transparent;
+}
+header div nav div.user_details ul.profile.dropdown_list li p {
   font-size: 14px;
   color: #212b36;
   font-weight: bold;
+  margin: 0;
 }
-header div nav div.user_details div.profile div button {
+header div nav div.user_details ul.profile.dropdown_list li button {
   background-color: #23c0f5;
   color: #fff;
   outline: none;
@@ -221,10 +242,9 @@ header div nav div.user_details div.profile div button {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-header div nav div.user_details div.profile div button:hover {
+header div nav div.user_details ul.profile.dropdown_list li button:hover {
   background-color: #fff;
   color: #23c0f5;
-  border: 1px solid #fff;
 }
 
 .btn {
@@ -332,7 +352,7 @@ section.signup div form button {
   width: 100%;
 }
 .form_container div.form_wrapper div.calender_container input::placeholder {
-  font-size: 14px;
+  font-size: 11px;
   color: #212b36;
 }
 .form_container div.form_wrapper div.form_details {
@@ -492,7 +512,7 @@ section.signup div form button {
 .form_container div.form_wrapper div.form_details .form_btn {
   margin-top: 60px;
 }
-.form_container div.form_wrapper div.form_details .form_btn .form__bck_btn {
+.form_container div.form_wrapper div.form_details .form_btn .btn.bck {
   margin-right: 70px;
 }
 
@@ -726,10 +746,10 @@ section.signup div form button {
 .doc_upload div.doc_wrapper .table_div table.inner_table tr td img {
   margin-right: 8px;
 }
-.doc_upload div .doc_btn .doc_back_btn {
+.doc_upload div .doc_btn .btn.bck {
   float: left;
 }
-.doc_upload div .doc_btn .doc_nxt_btn {
+.doc_upload div .doc_btn .btn.nxt {
   float: right;
 }
 
@@ -854,7 +874,7 @@ section.signup div form button {
   border-radius: 50%;
   padding: 4px;
   margin-left: 8px;
-  cursor: none;
+  cursor: default;
 }
 .results div.results_wrapper .table_container table tbody {
   background-color: #fff;
@@ -940,11 +960,11 @@ section.signup div form button {
   color: #fff;
   background-color: #637381;
 }
-.results div.results_wrapper .results__back_btn {
+.results div.results_wrapper .btn.bck {
   float: left;
   margin-top: 30px;
 }
-.results div.results_wrapper .results__next_btn {
+.results div.results_wrapper .btn.nxt {
   float: right;
   margin-top: 30px;
 }
@@ -1109,10 +1129,10 @@ section.signup div form button {
 .rates .rates_wrapper .rate__table_container .rate_buttons {
   margin: 50px 0;
 }
-.rates .rates_wrapper .rate__table_container .rate_buttons .rate__next_btn {
+.rates .rates_wrapper .rate__table_container .rate_buttons .btn.nxt {
   float: right;
 }
-.rates .rates_wrapper .rate__table_container .rate_buttons .rate__back_btn {
+.rates .rates_wrapper .rate__table_container .rate_buttons .btn.bck {
   float: left;
 }
 .rates .rates_wrapper .filter {
@@ -1384,10 +1404,10 @@ section.signup div form button {
   background-color: #f9fafb;
   padding: 101px 0 147px;
 }
-.review .process_completed div.process_section_wrapper .review_next_btn {
+.review .process_completed div.process_section_wrapper .btn.nxt {
   float: right;
 }
-.review .process_completed div.process_section_wrapper .review_back_btn {
+.review .process_completed div.process_section_wrapper .btn.bck {
   float: left;
 }
 .review .process_completed div.process_section_wrapper div {
@@ -1490,9 +1510,13 @@ section.signup div form button {
   background-color: white;
   font-size: 0;
   padding: 26px 20px;
-  position: relative;
 }
-.final_step div.finalstep_wrapper div.finalstep_container .load {
+.final_step div.finalstep_wrapper div.finalstep_container div.finalstep_div {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.final_step div.finalstep_wrapper div.finalstep_container div.finalstep_div .load {
   display: inline-block;
   border: 7px solid #dbecf8;
   border-right: 7px solid #23c0f5;
@@ -1503,12 +1527,12 @@ section.signup div form button {
   border-radius: 50%;
   transform: rotate(40deg);
 }
-.final_step div.finalstep_wrapper div.finalstep_container span.percentage {
+.final_step div.finalstep_wrapper div.finalstep_container div.finalstep_div span.percentage {
   font-size: 36px;
   color: #212b36;
-  left: 17%;
+  left: 50%;
   position: absolute;
-  top: 43%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 .final_step div.finalstep_wrapper div.finalstep_container div.container_element {
