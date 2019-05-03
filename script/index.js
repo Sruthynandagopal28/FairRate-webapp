@@ -66,20 +66,6 @@ $(document).ready(function(){
         $(".user_details").css("display","none");
         $(".login").css("display", "inline-block");
     });
- 
-    // // header border
-    // $(".rate__next_btn").click(function(){
-    //     $("header").css("box-shadow","0 0 2px grey");
-    // });
-    // $(".review_next_btn").click(function(){
-    //     $("header").css("box-shadow","none");
-    // });
-     
-    
-    // $(".btn.nxt").click(function(){
-        
-    //     $(this).parents(".rates").next().$("header").css("box-shadow","0 0 2px grey");
-    // });
      
    
     // rate-filter_container 
